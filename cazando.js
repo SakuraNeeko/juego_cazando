@@ -11,6 +11,7 @@ let gatoY   = 0;
 let comidaX = 0;
 let comidaY = 0;
 let puntos = 0;
+let tiempo = 10;
  
 function graficarRectangulo(x, y, ancho, alto, color) {
   ctx.fillStyle = color;
@@ -76,6 +77,16 @@ function detectarColision() {
     }
 }
 
+function restarTiempo() {
+    tiempo = tiempo - 1;
+    document.getElementById("tiempo").textContent = tiempo;
+
+    if (tiempo == 0) {
+        alert("Game Over");
+    }
+}
+
+
 function iniciarJuego() {
   gatoX = (canvas.width  - ANCHO_GATO)  / 2;
   gatoY = (canvas.height - ALTO_GATO)   / 2;
@@ -85,4 +96,6 @@ function iniciarJuego() {
  
   graficarGato();
   graficarComida();
+  setInterval(restarTiempo, 1000);
+
 }
