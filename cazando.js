@@ -29,31 +29,35 @@ function limpiarCanva() {
 }
 
 function moverIzquierda() {
-  gatoX -= 10;
-  limpiarCanva();
-  graficarGato();
-  graficarComida();
+    gatoX -= 10;
+    limpiarCanva();
+    graficarGato();
+    graficarComida();
 }
 
 function moverDerecha() {
-  gatoX += 10;
-  limpiarCanva();
-  graficarGato();
-  graficarComida();
+    gatoX += 10;
+    limpiarCanva();
+    graficarGato();
+    graficarComida();
 }
  
 function moverArriba() {
-  gatoY -= 10;
-  limpiarCanva();
-  graficarGato();
-  graficarComida();
+    gatoY -= 10;
+    limpiarCanva();
+    graficarGato();
+    graficarComida();
 }
  
 function moverAbajo() {
-  gatoY += 10;
-  limpiarCanva();
-  graficarGato();
-  graficarComida();
+    gatoY += 10;
+    limpiarCanva();
+    graficarGato();
+    graficarComida();
+}
+
+function detectarColision() {
+    alert("El gato ha comido");
 }
 
 function iniciarJuego() {
