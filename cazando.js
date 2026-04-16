@@ -24,6 +24,17 @@ function graficarComida() {
   graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "green");
 }
 
+function limpiarCanva() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function moverIzquierda() {
+  gatoX -= 10;
+  limpiarCanva();
+  graficarGato();
+  graficarComida();
+}
+
 function iniciarJuego() {
   gatoX = (canvas.width  - ANCHO_GATO)  / 2;
   gatoY = (canvas.height - ALTO_GATO)   / 2;
