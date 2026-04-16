@@ -35,6 +35,27 @@ function moverIzquierda() {
   graficarComida();
 }
 
+function moverDerecha() {
+  gatoX += 10;
+  limpiarCanva();
+  graficarGato();
+  graficarComida();
+}
+ 
+function moverArriba() {
+  gatoY -= 10;
+  limpiarCanva();
+  graficarGato();
+  graficarComida();
+}
+ 
+function moverAbajo() {
+  gatoY += 10;
+  limpiarCanva();
+  graficarGato();
+  graficarComida();
+}
+
 function iniciarJuego() {
   gatoX = (canvas.width  - ANCHO_GATO)  / 2;
   gatoY = (canvas.height - ALTO_GATO)   / 2;
