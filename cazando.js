@@ -12,6 +12,7 @@ let comidaX = 0;
 let comidaY = 0;
 let puntos = 0;
 let tiempo = 60;
+let intervalo;
  
 function graficarRectangulo(x, y, ancho, alto, color) {
   ctx.fillStyle = color;
@@ -77,6 +78,7 @@ function detectarColision() {
 
         if (puntos == 6) {
         alert("Ganaste");
+        reiniciarJuego();
         }
     }
 }
@@ -102,7 +104,7 @@ function iniciarJuego() {
  
   graficarGato();
   graficarComida();
-  setInterval(restarTiempo, 1000);
+  intervalo = setInterval(restarTiempo, 1000);
 
 }
 
@@ -123,5 +125,7 @@ function reiniciarJuego() {
   graficarGato();
   graficarComida();
 
-  setInterval(restarTiempo, 1000);
+  clearInterval(intervalo);
+  intervalo = setInterval(restarTiempo, 1000);
+
 }
