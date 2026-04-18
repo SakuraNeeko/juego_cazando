@@ -20,7 +20,7 @@ function graficarRectangulo(x, y, ancho, alto, color) {
 }
 
 function graficarGato() {
-  graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "orange");
+  graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "white");
 }
 
 function graficarComida() {

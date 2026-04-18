@@ -1,7 +1,7 @@
 body {
   text-align: center;
   font-family: Arial, sans-serif;
-  background: #350127f2;
+  background: #094370f2;
   margin: 0;
   padding: 20px;
 }
@@ -26,7 +26,7 @@ h3 {
 }
 
 canvas {
-  background: white;
+  background: rgb(151, 255, 169);
   border: 2px solid black;
 }
 
