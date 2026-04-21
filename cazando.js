@@ -71,6 +71,7 @@ function detectarColision() {
         gatoY + ALTO_GATO > comidaY
     ) {
         puntos = puntos + 1;
+        tiempo = 15;
         document.getElementById("puntos").textContent = puntos;
 
         comidaX = generarAleatorio(0, canvas.width - ANCHO_COMIDA);
