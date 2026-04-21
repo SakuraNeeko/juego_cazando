@@ -17,6 +17,9 @@ let intervalo;
 
 const imagenGato = new Image();
 imagenGato.src = "gato.png";
+
+const imagenComida = new Image();
+imagenComida.src = "raton.png"
  
 function graficarRectangulo(x, y, ancho, alto, color) {
   ctx.fillStyle = color;
@@ -28,7 +31,7 @@ function graficarGato() {
 }
 
 function graficarComida() {
-  graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "green");
+  ctx.drawImage(imagenComida, comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA);
 }
 
 function limpiarCanva() {
@@ -114,6 +117,10 @@ function iniciarJuego() {
  
   imagenGato.onload = function() {
       graficarGato();
+      graficarComida();
+  };
+
+  imagenComida.onload = function() {
       graficarComida();
   };
   
