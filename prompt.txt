@@ -1,0 +1,10 @@
+--- HISTORIAL DE PROMPTS - MEJORA DE INTERFAZ (TALLER 1 & 2) ---
+
+PROMPT 1 (Mejora visual inicial y Modal):
+"Actúa como un diseñador web frontend senior especializado en interfaces con estética anime y diseño de juegos moderno. Eres experto en HTML, Bootstrap, CSS puro y JavaScript vanilla. Necesito que a mi juego de 'Cazando' le des un buen estilo, que sea bonito y agradable usando la técnica de glassmorphism. Además, en lugar de usar un `alert` nativo del navegador, agrega un mensaje en una ventana modal bonita que indique el Game Over o la victoria, sin eliminar nada de la lógica del programa en JavaScript."
+
+PROMPT 2 (Corrección de Layout Responsive):
+"El diseño está genial, pero tengo que reducir el zoom de la página al 67% para poder visualizar todo completo en la pantalla. Sin tocar la lógica del juego, ¿cómo arreglamos eso con CSS? ¿Podemos usar Flexbox para poner los botones y marcadores a un lado del área de juego para optimizar el espacio vertical?"
+
+PROMPT 3 (Incorporación de Fondo de Internet):
+"Evalúa el estado actual de mi proyecto CSS/HTML. Siguiendo las instrucciones de mi taller, necesito incorporar un fondo (background) obtenido de internet. Actualiza mi CSS para añadir una imagen de fondo de un paisaje anime o cielo nocturno, asegurando que se adapte a la pantalla y mantenga la legibilidad del contenedor de cristal."
