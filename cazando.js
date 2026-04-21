@@ -89,8 +89,8 @@ function detectarColision() {
         comidaY = generarAleatorio(0, canvas.height - ALTO_COMIDA);
 
         if (puntos == 6) {
-        alert("Ganaste");
-        reiniciarJuego();
+          mostrarModal("¡Nivel Superado! 🌸", "¡Has atrapado a tu presa con éxito!");
+          reiniciarJuego();
         }
     }
 }
@@ -102,8 +102,8 @@ function restarTiempo() {
 
     if (tiempo == 0) {
       clearInterval(intervalo);
-        alert("Game Over");
-        reiniciarJuego();
+      mostrarModal("Game Over 🥀", "Se te acabó el tiempo. ¡Inténtalo de nuevo!");
+      reiniciarJuego();
     }
 }
 

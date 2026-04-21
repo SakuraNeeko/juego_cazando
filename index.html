@@ -1,34 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juego Cazando</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="cazando.css">
 </head>
 <body onload="iniciarJuego()">
 
-  <h1>Atrapa al ratón</h1>
-  <h3>Autor: Neeko</h3>
+  <div class="glass-container">
+    <div class="header-titles">
+      <h1>✨ Atrapa al ratón ✨</h1>
+      <h3>Autor: Neeko</h3>
+    </div>
 
-  <canvas id="areaJuego" width="500" height="500"></canvas>
+    <div class="game-layout">
+      
+      <div class="game-board">
+        <canvas id="areaJuego" width="500" height="500"></canvas>
+      </div>
 
-  <div class="controles">
-    <button onclick="moverArriba()">⬆</button>
-    <br>
-    <button onclick="moverIzquierda()">⬅</button>
-    <button onclick="moverAbajo()">⬇</button>
-    <button onclick="moverDerecha()">➡</button>
-    <br>
-    <button onclick="reiniciarJuego()">REINICIAR</button>
+      <div class="game-sidebar">
+        <div class="panel">
+          <div class="badge">Puntos: <span id="puntos">0</span></div>
+          <div class="badge">Tiempo: <span id="tiempo">15</span></div>
+        </div>
+
+        <div class="controles">
+          <button class="btn-neo" onclick="moverArriba()">⬆</button>
+          <div class="btn-row">
+            <button class="btn-neo" onclick="moverIzquierda()">⬅</button>
+            <button class="btn-neo" onclick="moverAbajo()">⬇</button>
+            <button class="btn-neo" onclick="moverDerecha()">➡</button>
+          </div>
+          <button class="btn-action" onclick="reiniciarJuego()">REINICIAR 🔄</button>
+        </div>
+      </div>
+      
+    </div>
+
+    <p id="mensaje"></p>
   </div>
 
-  <div class="panel">
-    <span>Puntos: <span id="puntos">0</span></span>
-    <span>Tiempo: <span id="tiempo">15</span></span>
+  <div id="modalJuego" class="modal-overlay">
+    <div class="modal-glass">
+      <h2 id="modalTitulo">Mensaje</h2>
+      <p id="modalTexto"></p>
+      <button class="btn-action" onclick="cerrarModal()">Aceptar</button>
+    </div>
   </div>
-
-  <p id="mensaje"></p>
 
   <script src="utils.js"></script>
   <script src="cazando.js"></script>
+  
+  <script>
+    function mostrarModal(titulo, texto) {
+      document.getElementById('modalTitulo').innerText = titulo;
+      document.getElementById('modalTexto').innerText = texto;
+      document.getElementById('modalJuego').style.display = 'flex';
+    }
+
+    function cerrarModal() {
+      document.getElementById('modalJuego').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
